@@ -13,7 +13,9 @@ const App = () => {
     <BrowserRouter>
       <div className="App">
         <h2>App.js</h2>
-
+        <MyButton text={"positive"} type={"positive"} />
+        <MyButton text={"negative"} type={"negative"} />
+        <MyButton text={"normal"} type={"normal"} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new" element={<New />} />
