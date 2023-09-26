@@ -4,20 +4,32 @@ import Home from "./component/Home";
 import New from "./component/New";
 import Edit from "./component/Edit";
 import Diary from "./component/Diary";
-import RouteTest from "./component/RouteTest";
+
+//  COMPONENTS
+import MyButton from "./ui/MyButton";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
         <h2>App.js</h2>
+        <MyButton
+          text="버튼"
+          onClick={() => alert("버튼 클릭")}
+          type="positive"
+        />
+        <MyButton
+          text="버튼"
+          onClick={() => alert("버튼 클릭")}
+          type="negative"
+        />
+        <MyButton text="버튼" onClick={() => alert("버튼 클릭")} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new" element={<New />} />
           <Route path="/edit" element={<Edit />} />
           <Route path="/diary/:id" element={<Diary />} />
         </Routes>
-        <RouteTest />
       </div>
     </BrowserRouter>
   );
