@@ -13,17 +13,7 @@ const App = () => {
     <BrowserRouter>
       <div className="App">
         <h2>App.js</h2>
-        <MyButton
-          text="버튼"
-          onClick={() => alert("버튼 클릭")}
-          type="positive"
-        />
-        <MyButton
-          text="버튼"
-          onClick={() => alert("버튼 클릭")}
-          type="negative"
-        />
-        <MyButton text="버튼" onClick={() => alert("버튼 클릭")} />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new" element={<New />} />
