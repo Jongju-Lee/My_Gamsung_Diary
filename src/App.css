@@ -39,7 +39,7 @@ body {
 
 /* MyButton */
 
-/* .MyButton {
+.MyButton {
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -62,27 +62,4 @@ body {
 .MyButton_negative {
   background-color: #fd565f;
   color: white;
-} */
-
-.MyButton {
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 18px;
-  white-space: nowrap;
-}
-
-.MyButton_positive {
-  background-color: rgb(144, 227, 144);
-  color: white;
-}
-.MyButton_negative {
-  background-color: rgb(250, 95, 95);
-  color: white;
-}
-
-.MyButton_default {
-  background-color: #d6d6d6;
-  color: rgb(105, 105, 105);
 }
