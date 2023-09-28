@@ -93,3 +93,25 @@ header .head_text {
   font-size: 20px;
   font-weight: 700;
 }
+
+/* DiaryList */
+
+.diaryItem {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+}
+
+.diaryItem .diary_img {
+  width: 20%;
+}
+
+.diaryItem .diary_info {
+  font-size: 24px;
+}
+
+.diaryItem .diary_edit_btn {
+  width: 20%;
+}
