@@ -18,6 +18,7 @@ const Edit = () => {
       if (targetDiary) {
         setOriginData(targetDiary);
       } else {
+        alert("존재하지 않는 일기 입니다.");
         navigate("/", { replace: true });
       }
     }
