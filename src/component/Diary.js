@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import MyHeader from "../ui/MyHeader";
-import MyButton from "../ui/MyButton";
 import { DiaryStateContext } from "../App";
 import { getStringDate } from "../util/date";
+import { emotion, emotionList } from "../util/emotion";
+import MyHeader from "../ui/MyHeader";
+import MyButton from "../ui/MyButton";
 
 const Diary = () => {
   const navigate = useNavigate();
@@ -28,6 +29,10 @@ const Diary = () => {
   if (!data) {
     return <div className="DiaryPage">로딩중입니다...</div>;
   } else {
+    const curEmotionData = emotionList.find(
+      (it) => parseInt(it.emotion_id) === parseInt(data.id)
+    );
+
     return (
       <div className="DiaryPage">
         <MyHeader
@@ -41,10 +46,23 @@ const Diary = () => {
               onClick={() => navigate(`/edit/${data.id}`)}
             />
           }
-          // 2023. 10. 01 오전 12: 40 여기부터 하면 됨~
-          // 페이지 구현 - 일기 상세(/diary)
-          // 9분 13초부터 보면됨
         />
+        <article>
+          <section>
+            <h4>오늘의 감정</h4>
+            <div
+              className={[
+                "diary_img_wrapper",
+                `diary_img_wrapper_${data.emotion}`,
+              ].join(" ")}
+            >
+              <img src={curEmotionData.emotion_img} />
+              <div className="emotion_description">
+                {curEmotionData.emotion_description}
+              </div>
+            </div>
+          </section>
+        </article>
       </div>
     );
   }
