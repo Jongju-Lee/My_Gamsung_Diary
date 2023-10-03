@@ -63,7 +63,7 @@ const Diary = () => {
             </div>
           </section>
           <section>
-            <h4>오늘의 일기</h4>
+            <h4>오늘의 일기!!</h4>
             <div className="diary_content_wrapper">
               <p>{data.content}</p>
             </div>
